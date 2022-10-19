@@ -1,6 +1,6 @@
-package parse;
+package csv;
 
-import player.Player;
+import players.Player;
 
 public interface NameOfGameHandler {
 

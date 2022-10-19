@@ -5,12 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d88b5b06-dbd1-45fe-ba78-d44e2f805623" name="Changes" comment="Refactor">
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/PlayersService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/buildMap/BuildFinalMap.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat/CheckCorrectFileFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat/CheckCorrectFileFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat/exception/DirectoryIsEmpty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat/exception/WrongFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat/exception/FileFormatException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/count_score/Count.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parse/Basketball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parse/Basketball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parse/ChooseParser.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parse/Handball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parse/Handball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parse/NameOfGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parse/NameOfGameHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parse/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parse/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/player/BasketballPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/players/BasketballPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/player/HandballPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/players/HandballPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/players/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -45,7 +56,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/antoh/OneDrive/Рабочий стол/testTask/testTask/data"
+    "last_opened_file_path": "C:/Users/antoh/OneDrive/Рабочий стол/testTask/testTask"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -78,7 +89,7 @@
       <workItem from="1666177163128" duration="7266000" />
       <workItem from="1666184671024" duration="39000" />
       <workItem from="1666184739209" duration="14000" />
-      <workItem from="1666186905275" duration="18884000" />
+      <workItem from="1666186905275" duration="24049000" />
     </task>
     <task id="LOCAL-00001" summary="add Player interface and Exception">
       <created>1666177748070</created>
@@ -115,7 +126,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666205619696</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactor">
+      <created>1666205964992</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666205964992</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactor">
+      <created>1666205975421</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666205975422</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

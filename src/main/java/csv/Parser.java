@@ -1,6 +1,6 @@
-package parse;
+package csv;
 
-import player.Player;
+import players.Player;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +15,7 @@ public class Parser {
         this.nameOfGameHandler = nameOfGameHandler;
     }
 
-    public List<Player> executeParse(File file) throws IOException {
+    public List<Player> parse(File file) throws IOException {
         List<String> lines = Files.readAllLines(file.toPath());
         lines.remove(0);
         List<Player> players = new ArrayList<>();

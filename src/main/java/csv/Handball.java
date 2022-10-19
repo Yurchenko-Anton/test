@@ -1,6 +1,6 @@
-package parse;
+package csv;
 
-import player.HandballPlayer;
+import players.HandballPlayer;
 
 public class Handball implements NameOfGameHandler {
 
