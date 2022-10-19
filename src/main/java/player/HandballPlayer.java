@@ -1,15 +1,17 @@
 package player;
 
-public class SomePlayer implements Player {
+public class HandballPlayer implements Player {
     private String name;
     private String nick;
     private String teamName;
+    private int goals;
     private int score;
 
-    public SomePlayer(String name, String nick, String teamName, int score) {
+    public HandballPlayer(String name, String nick, String teamName, int goals, int score) {
         this.name = name;
         this.nick = nick;
         this.teamName = teamName;
+        this.goals = goals;
         this.score = score;
     }
 
@@ -44,6 +46,16 @@ public class SomePlayer implements Player {
     }
 
     @Override
+    public int getGoals() {
+        return goals;
+    }
+
+    @Override
+    public void setGoals(int goals) {
+        this.goals = goals;
+    }
+
+    @Override
     public int getScore() {
         return score;
     }
@@ -53,12 +65,13 @@ public class SomePlayer implements Player {
         this.score = score;
     }
 
+
     @Override
     public String toString() {
-        return "SomePlayer{" +
+        return "HandballPlayer{" +
                 "name='" + name + '\'' +
                 ", nick='" + nick + '\'' +
-                ", score=" + score +
+                ", mvpScore=" + score +
                 '}';
     }
 }

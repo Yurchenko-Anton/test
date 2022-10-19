@@ -4,15 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d88b5b06-dbd1-45fe-ba78-d44e2f805623" name="Changes" comment="add Parser">
-      <change afterPath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat_andMVP/MVP.java" afterDir="false" />
+    <list default="true" id="d88b5b06-dbd1-45fe-ba78-d44e2f805623" name="Changes" comment="Add Class MVP and refactor code">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/buildMap/BuildFinalMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat/CheckCorrectFileFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/count_score/Count.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parse/Basketball.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parse/ChooseParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parse/Handball.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parse/NameOfGameHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/player/HandballPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/handball.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/handball.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/handball1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/handball1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat/CheckCorrectFileFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat_andMVP/CheckCorrectFileFormat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parse/ParseBasketball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parse/ParseBasketball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/player/SomePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/SomePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat_andMVP/CheckCorrectFileFormat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat_andMVP/MVP.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exception/DirectoryIsEmpty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat/exception/DirectoryIsEmpty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exception/WrongFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat/exception/WrongFormatException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parse/ParseBasketball.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parse/ParseHandball.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parse/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parse/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/player/SomePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/BasketballPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -43,9 +56,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/antoh/OneDrive/Рабочий стол/testTask/testTask/data"
+    "last_opened_file_path": "C:/Users/antoh/Тестовое/testTask_Yurchenko_Anton"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -75,7 +89,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666177161609</updated>
-      <workItem from="1666177163128" duration="6666000" />
+      <workItem from="1666177163128" duration="7266000" />
+      <workItem from="1666184671024" duration="39000" />
+      <workItem from="1666184739209" duration="14000" />
+      <workItem from="1666186905275" duration="18452000" />
     </task>
     <task id="LOCAL-00001" summary="add Player interface and Exception">
       <created>1666177748070</created>
@@ -98,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666181728116</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Class MVP and refactor code">
+      <created>1666184290069</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666184290069</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +143,7 @@
     <MESSAGE value="add Player interface and Exception" />
     <MESSAGE value="add CheckCorrectFileFormat" />
     <MESSAGE value="add Parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Parser" />
+    <MESSAGE value="Add Class MVP and refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Class MVP and refactor code" />
   </component>
 </project>

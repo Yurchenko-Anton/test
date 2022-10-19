@@ -1,31 +1,28 @@
 package parse;
 
 import player.Player;
-import player.SomePlayer;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.List;
 
-public abstract class Parser {
-    public abstract void parse(File file, HashMap<String, Player> players) throws IOException;
+public class Parser {
+    NameOfGameHandler nameOfGameHandler;
 
-    public void getPointToWinner(HashMap<String, Integer> topPoint, HashMap<String, Player> players) {
-        String team = topPoint.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
-        players.values().stream().filter(player -> player.getTeamName().equals(team))
-                .forEach(player -> player.setScore(player.getScore() + 10));
+    public void setNameOfGame(NameOfGameHandler nameOfGameHandler) {
+        this.nameOfGameHandler = nameOfGameHandler;
     }
 
-    public void addNewOrChangePlayer(HashMap<String, Player> players, String[] fragments, int score) {
-        if (players.get(fragments[1]) == null) {
-            players.put(fragments[1], new SomePlayer(fragments[0], fragments[1], fragments[3], score));
-        } else {
-            SomePlayer somePlayer = (SomePlayer) players.get(fragments[1]);
-            somePlayer.setTeamName(fragments[3]);
-            somePlayer.setScore(somePlayer.getScore() + score);
-            players.put(somePlayer.getNick(), somePlayer);
+    public List<Player> executeParse(File file) throws IOException {
+        List<String> lines = Files.readAllLines(file.toPath());
+        lines.remove(0);
+        List<Player> players = new ArrayList<>();
+        for (String line : lines) {
+            String[] fragments = line.split(";");
+            players.add(nameOfGameHandler.getObject(fragments));
         }
+        return players;
     }
-
 }
