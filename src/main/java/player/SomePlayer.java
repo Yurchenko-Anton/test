@@ -58,7 +58,6 @@ public class SomePlayer implements Player{
         return "SomePlayer{" +
                 "name='" + name + '\'' +
                 ", nick='" + nick + '\'' +
-                ", teamName='" + teamName + '\'' +
                 ", score=" + score +
                 '}';
     }
