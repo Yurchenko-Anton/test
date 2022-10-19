@@ -13,17 +13,19 @@ import java.util.HashMap;
 
 public class Main {
     static String path = "data";
-    static HashMap<String,Player> players = new HashMap<>();
+    static HashMap<String, Player> players = new HashMap<>();
+
     public static void main(String[] args) throws IOException, DirectoryIsEmpty, WrongFormatException {
         File folder = new File(path);
         File[] listFiles = folder.listFiles();
         new CheckCorrectFileFormat().CheckFileFormat(listFiles);
-        for (File file : listFiles){
-            new BuildFinalMap().build(new Count().count(new ChooseParser().choose(file)),players);
+        for (File file : listFiles) {
+            new BuildFinalMap().build(new Count().count(new ChooseParser().choose(file)), players);
         }
         System.out.println(MVP());
     }
-    static Player MVP(){
+
+    static Player MVP() {
         return players.entrySet().stream()
                 .max(Comparator.comparing(stringPlayerEntry -> stringPlayerEntry.getValue().getScore()))
                 .get().getValue();

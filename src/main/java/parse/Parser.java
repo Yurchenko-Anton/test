@@ -21,7 +21,7 @@ public class Parser {
         List<Player> players = new ArrayList<>();
         for (String line : lines) {
             String[] fragments = line.split(";");
-            players.add(nameOfGameHandler.getObject(fragments));
+            players.add(nameOfGameHandler.getPlayerObject(fragments));
         }
         return players;
     }
