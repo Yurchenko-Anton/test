@@ -1,10 +1,9 @@
-package checkCorrectFileFormat;
+package checkCorrectFileFormat_andMVP;
 
 import exception.DirectoryIsEmpty;
 import exception.WrongFormatException;
 import parse.ParseBasketball;
 import parse.ParseHandball;
-import parse.Parser;
 import player.Player;
 
 import java.io.BufferedReader;
@@ -14,8 +13,9 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class CheckCorrectFileFormat {
-    HashMap<String, Player> players = new HashMap<>();
-    public void CheckFileFormat(String path) throws IOException, WrongFormatException, DirectoryIsEmpty {
+    private final HashMap<String, Player> players = new HashMap<>();
+
+    public Player CheckFileFormat(String path) throws IOException, WrongFormatException, DirectoryIsEmpty {
         File folder = new File(path);
         File[] listFiles = folder.listFiles();
         if (listFiles != null) {
@@ -27,6 +27,7 @@ public class CheckCorrectFileFormat {
                 }
             }
         } else throw new DirectoryIsEmpty(folder.getName());
+        return new MVP().findMVP(players);
     }
 
     private void checkedFile(File file) throws IOException {
@@ -34,9 +35,11 @@ public class CheckCorrectFileFormat {
         String firstLine = readFirstLine.readLine().toLowerCase();
         switch (firstLine) {
             case "basketball":
-                new ParseBasketball().parse(file,players);
+                new ParseBasketball().parse(file, players);
+                break;
             case "handball":
-                 new ParseHandball().parse(file,players);
+                new ParseHandball().parse(file, players);
+                break;
             default:
                 System.out.println("Not Found This Game");
         }

@@ -1,6 +1,6 @@
 package exception;
 
-public class WrongFormatException extends Exception{
+public class WrongFormatException extends Exception {
     public WrongFormatException(String message) {
         super(message);
     }

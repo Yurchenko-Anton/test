@@ -1,6 +1,6 @@
 package player;
 
-public class SomePlayer implements Player{
+public class SomePlayer implements Player {
     private String name;
     private String nick;
     private String teamName;
