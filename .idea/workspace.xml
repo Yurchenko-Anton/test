@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d88b5b06-dbd1-45fe-ba78-d44e2f805623" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/basketball.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/basketball2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/handball.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/handball1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exception/DirectoryIsEmpty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exception/WrongFormatException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/player/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/player/SomePlayer.java" afterDir="false" />
+    <list default="true" id="d88b5b06-dbd1-45fe-ba78-d44e2f805623" name="Changes" comment="add Player interface and Exception">
+      <change afterPath="$PROJECT_DIR$/src/main/java/checkCorrectFileFormat/CheckCorrectFileFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parse/ParseBasketball.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parse/ParseHandball.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parse/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/player/SomePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/SomePlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +47,25 @@
     "last_opened_file_path": "C:/Users/antoh/OneDrive/Рабочий стол/testTask/testTask/data"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\antoh\OneDrive\Рабочий стол\testTask\testTask\data" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="testTask" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -62,8 +74,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666177161609</updated>
-      <workItem from="1666177163128" duration="348000" />
+      <workItem from="1666177163128" duration="4502000" />
     </task>
+    <task id="LOCAL-00001" summary="add Player interface and Exception">
+      <created>1666177748070</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666177748070</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,5 +99,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add Player interface and Exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Player interface and Exception" />
   </component>
 </project>
