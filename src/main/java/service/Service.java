@@ -1,6 +1,6 @@
 package service;
 
-import checkCorrectFileFormat.exception.FileFormatException;
+import validations.exceptions.FileFormatException;
 import players.Player;
 
 import java.io.File;

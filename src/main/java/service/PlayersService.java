@@ -1,6 +1,6 @@
 package service;
 
-import checkCorrectFileFormat.exception.FileFormatException;
+import validations.exceptions.FileFormatException;
 import csv.handle.BasketballParsingValueHandler;
 import csv.handle.HandballParsingValueHandler;
 import csv.handle.PlayerValueHandler;

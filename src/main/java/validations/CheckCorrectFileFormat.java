@@ -1,6 +1,6 @@
-package checkCorrectFileFormat;
+package validations;
 
-import checkCorrectFileFormat.exception.FileFormatException;
+import validations.exceptions.FileFormatException;
 
 import java.io.File;
 import java.io.FileNotFoundException;

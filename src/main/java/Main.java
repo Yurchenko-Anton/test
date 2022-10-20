@@ -1,5 +1,5 @@
-import checkCorrectFileFormat.CheckCorrectFileFormat;
-import checkCorrectFileFormat.exception.FileFormatException;
+import validations.CheckCorrectFileFormat;
+import validations.exceptions.FileFormatException;
 import players.Player;
 import service.PlayersService;
 
