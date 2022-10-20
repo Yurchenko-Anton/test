@@ -1,8 +1,10 @@
 package service;
 
-import csv.Basketball;
-import csv.Handball;
-import csv.Parser;
+import checkCorrectFileFormat.exception.FileFormatException;
+import csv.handle.BasketballParsingValueHandler;
+import csv.handle.HandballParsingValueHandler;
+import csv.handle.PlayerValueHandler;
+import csv.parsers.CsvParser;
 import players.Player;
 
 import java.io.BufferedReader;
@@ -12,28 +14,23 @@ import java.io.IOException;
 import java.util.*;
 
 public class PlayersService implements Service {
+    private static final char SPLITITERATOR = ';';
 
     @Override
-    public List<Player> getFromCsv(File file) throws IOException {
+    public List<Player> getFromCsv(File file) throws IOException, FileFormatException {
         try (BufferedReader readFirstLine = new BufferedReader(new FileReader(file))) {
-            Parser parser = new Parser();
-            String firstLine = readFirstLine.readLine().toLowerCase();
-            switch (firstLine) {
-                case "basketball": {
-                    parser.setNameOfGame(new Basketball());
-                    return new ArrayList<>(parser.parse(file));
-                }
-                case "handball": {
-                    parser.setNameOfGame(new Handball());
-                    return new ArrayList<>(parser.parse(file));
-                }
-                default: {
-                    System.out.println("Not Found This Game");
-                    return null;
-                }
-            }
-        } catch (IOException ioException) {
-            throw new IOException();
+            CsvParser csvParser;
+            PlayerValueHandler<?> valueHandler;
+
+            String playerType = readFirstLine.readLine().toLowerCase();
+
+            valueHandler = chooseValueHandler(playerType);
+
+            csvParser = new CsvParser(valueHandler, SPLITITERATOR);
+            csvParser.parse(readFirstLine);
+
+            return new ArrayList<>(valueHandler.getResult());
+
         }
     }
 
@@ -44,8 +41,7 @@ public class PlayersService implements Service {
             topPoint.merge(player.getTeamName(), player.getGoals(), Integer::sum);
         }
         String team = topPoint.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
-        players.stream().filter(player -> player.getTeamName().equals(team))
-                .forEach(player -> player.setScore(player.getScore() + 10));
+        players.stream().filter(player -> player.getTeamName().equals(team)).forEach(player -> player.setScore(player.getScore() + 10));
         return players;
     }
 
@@ -62,9 +58,21 @@ public class PlayersService implements Service {
     }
 
     @Override
-    public Player getMvp(HashMap<String,Player> players) {
-        return players.entrySet().stream()
-                .max(Comparator.comparing(stringPlayerEntry -> stringPlayerEntry.getValue().getScore()))
-                .get().getValue();
+    public Player getMvp(HashMap<String, Player> players) {
+        return players.entrySet().stream().max(Comparator.comparing(stringPlayerEntry -> stringPlayerEntry.getValue().getScore())).get().getValue();
+    }
+
+    private PlayerValueHandler<?> chooseValueHandler(String playerType) throws FileFormatException {
+        switch (playerType) {
+            case "basketball": {
+                return new BasketballParsingValueHandler(new ArrayList<>());
+            }
+            case "handball": {
+                return new HandballParsingValueHandler(new ArrayList<>());
+            }
+            default: {
+                throw new FileFormatException("Player type " + playerType + " not supported");
+            }
+        }
     }
 }
